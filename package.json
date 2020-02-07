@@ -8,7 +8,7 @@
     "NOTE": "Optional release Section. Customizes result of `esy release`",
     "release": {
       "bin": [
-        "Hello"
+        "NiteCLI"
       ]
     },
     "buildEnv": {
@@ -16,17 +16,18 @@
     }
   },
   "scripts": {
-    "test": "esy x Hello",
+    "dev": "esy x NiteCLI",
+    "test": "esy x RunTests",
     "doc": "esy dune build @doc"
   },
   "dependencies": {
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.6.0",
     "@opam/dune": "*",
     "@reason-native/console": "*",
     "@reason-native/pastel": "*",
-    "@reason-native/rely": "*",
-    "@esy-ocaml/reason": ">= 3.4.0 < 3.6.0",
-    "refmterr": "*",
-    "ocaml": "~4.8.1000"
+    "@reason-native/rely": "^3.1.0",
+    "ocaml": "~4.8.1000",
+    "refmterr": "*"
   },
   "devDependencies": {
     "@opam/merlin": "*",
